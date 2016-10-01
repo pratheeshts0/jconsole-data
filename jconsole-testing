@@ -1,0 +1,20 @@
+
+
+http://stackoverflow.com/questions/856881/how-to-activate-jmx-on-my-jvm-for-access-with-jconsole
+
+http://www.oracle.com/technetwork/articles/java/jconsole-1564139.html
+
+
+
+
+
+
+
+
+java -Dcom.sun.management.jmxremote \
+  -Dcom.sun.management.jmxremote.port=9010 \
+  -Dcom.sun.management.jmxremote.local.only=false \
+  -Dcom.sun.management.jmxremote.authenticate=false \
+  -Dcom.sun.management.jmxremote.ssl=false \
+  -Djava.rmi.server.hostname=192.168.1.234 \
+  -jar Notepad.jar
